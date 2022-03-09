@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/pasatiempo.png" />
+    <title>Tablero</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-success fixed-top ">
+        <div class="container justify-content-center">
+            <a href="#" class="navbar-brand text-white"> <img src="img/pasatiempo.png" alt=""> Listo el Juego</a>
+        </div>
+        
+    </nav>
+
+    <div class="container ">
+        <div class="row mt-5 ">
+            <div class="col mt-4 ">
+
+                <div class="row justify-content-center ">
+                    <h4 class="display-5">Jugador :: <h4 id="mostrar_usuario" class="display-5"> </h4></h4> 
+                </div>
+    
+            </div>
+        </div>
+    </div>
+
+
+    <!-- TABLERO -->
+    <div class="container" id="tablero_cuadro">
+
+            <!-- Se genera con JavaScrip-->
+
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container ">
+        <div class="row mt-3 mb-5 justify-content-center">
+            <div class="cronometro col-xl-3 col-lg-3 col-md-4 col-sm-4 m-2">
+                <div class="shadow-sm p-2 bg-light rounded text-center border border-info rounded-lg" id="screen">00 : 00 : 00 </div>
+            </div>
+            <div class="movimientos col-xl-3 col-lg-3 col-md-4 col-sm-4 m-2">
+                <div class="shadow-sm p-2 bg-light rounded text-center border border-info rounded-lg" id="screen_movimientos"> 0 </div>
+            </div>
+        </div>
+
+        <div class="row mt-3 justify-content-center">
+            <div class="col-xl-2 col-lg-2  m-2">
+                <button id="boton_inicio" type="button" class="btn btn-primary btn-block" onclick="inicio()" >Iniciar</button>
+            </div>
+
+            <div class="col-xl-2 col-lg-2  m-2">
+                <button id="boton_pausar" type="button" class="btn btn-primary btn-block disabled" onclick="detener()" disabled>Pausa</button>
+            </div>
+
+            <div class="col-xl-2 col-lg-2  m-2">
+                <button id="boton_seguir" type="button" class="btn btn-primary btn-block disabled" onclick="volver()" disabled>Seguir</button>
+            </div>
+
+            <div class="col-xl-2 col-lg-2  m-2">
+                <button id="boton_resetear" type="button" class="btn btn-primary btn-block disabled" onclick="reiniciar()" disabled>Reiniciar</button>
+            </div>
+            
+        </div>
+    </div>
+
+
+    <div class="modal" tabindex="-1" role="dialog" id="modalMensaje">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title badge badge-success">MENSAJE</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p id="mensaje"></p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">SALIR</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/tablero.js"></script>
+</body>
+</html>
